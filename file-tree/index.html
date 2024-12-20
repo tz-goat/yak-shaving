@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<head>
+
+</head>
+
+<body>
+    <div class="level-1">
+        <span>Root Folder</span>
+        <div class="level-2"><span>Child Folder1</span></div>
+        <div class="level-2"><span>Child Folder2</span>
+            <div class="level-3"><span>Child Folder3</span></div>
+        </div>
+    </div>
+</body>
+<style>
+    .level-1 {
+        background-color: red;
+        border-left: 1px black solid;
+    }
+
+    .level-1>div span {
+        border-left: 5px solid;
+        position: relative;
+        padding-left: 20px;
+    }
+
+    .level-1>div span::after {
+        content: '-->';
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+    }
+
+    .level-2 {
+        background-color: yellow;
+        margin-left: 20px;
+    }
+
+    .level-3 {
+        background-color: green;
+        margin-left: 20px;
+    }
+</style>
+
+</html>

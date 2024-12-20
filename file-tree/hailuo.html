@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Tree</title>
+    <style>
+        .tree {
+            list-style-type: none;
+        }
+
+        .tree li {
+            margin: 0;
+            padding: 0 1em;
+            position: relative;
+            list-style-type: none;
+
+        }
+
+        .tree li:before {
+            content: "";
+            position: absolute;
+            top: -0.5em;
+            left: -0.5em;
+            border-left: 1px solid #000;
+            border-bottom: 1px solid #000;
+            width: 0.5em;
+            height: 1em;
+        }
+
+        .tree li:after {
+            content: "";
+            position: absolute;
+            top: 0.5em;
+            left: -0.5em;
+            border-left: 1px solid #000;
+            width: 0.5em;
+            height: 100%;
+        }
+
+        .tree>li:after {
+            /* border-left: none; */
+        }
+
+        .tree li:last-child:after {
+            border-left: none;
+        }
+
+        .folder:before {
+            content: "📁 ";
+        }
+
+        .file:before {
+            content: "📄 ";
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="tree">
+        <li>
+            <span>C:\</span>
+            <ul>
+                <li>
+                    <span>Program Files</span>
+                </li>
+                <li>
+                    <span>Windows</span>
+                </li>
+                <li>
+                    <span>...</span>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span>D:\</span>
+            <ul>
+                <li>
+                    <span>Java</span>
+                    <ul>
+                        <li>
+                            <span>beginner</span>
+                            <ul>
+                                <li class="file"><span>Hello.java</span></li>
+                                <li class="file"><span>Hello.class</span></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>Advanced</span>
+                            <ul>
+                                <li class="file"><span>Pong.java</span></li>
+                                <li class="file"><span>Pong.class</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span>...</span>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span>...</span>
+        </li>
+    </ul>
+</body>
+
+</html>

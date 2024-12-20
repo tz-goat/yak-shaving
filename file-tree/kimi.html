@@ -1,0 +1,57 @@
+<html>
+<ul class="file-tree">
+    <li>Program Files
+        <ul>
+            <li>...</li>
+        </ul>
+    </li>
+    <li>Windows
+        <ul>
+            <li>...</li>
+        </ul>
+    </li>
+    <!-- 其他文件夹和文件 -->
+</ul>
+
+</html>
+<style>
+    .file-tree li {
+        list-style-type: none;
+        /* 移除默认的列表项符号 */
+        position: relative;
+        /* 设置相对定位，以便伪元素可以相对于它定位 */
+    }
+
+    .file-tree li::before {
+        content: '';
+        /* 伪元素的内容 */
+        position: absolute;
+        /* 绝对定位 */
+        left: -20px;
+        /* 根据需要调整 */
+        top: 0;
+        /* 从顶部开始 */
+        bottom: 0;
+        /* 到底部结束 */
+        width: 1px;
+        /* 线条的宽度 */
+        background-color: #ccc;
+        /* 线条的颜色 */
+    }
+
+    .file-tree li::after {
+        content: '';
+        /* 伪元素的内容 */
+        position: absolute;
+        left: -20px;
+        /* 根据需要调整 */
+        top: 10px;
+        /* 根据需要调整 */
+        width: 20px;
+        /* 线条的长度 */
+        height: 1px;
+        /* 线条的宽度 */
+        background-color: #ccc;
+        /* 线条的颜色 */
+    }
+</style>
