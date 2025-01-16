@@ -15,10 +15,32 @@
             padding: 0 1em;
             position: relative;
             list-style-type: none;
-
+            background-color: greenyellow;
         }
 
-        .tree li:before {
+        .tree li ::before {
+            content: "";
+            position: absolute;
+            height: 1em;
+            width: 0.5em;
+            /* background-color: red; */
+            border-left: 1px solid;
+            border-bottom: 1px solid;
+            left: -0.5em;
+            top: -0.5em;
+        }
+
+        .tree li::after {
+            content: "";
+            position: absolute;
+            border-left: 1px solid;
+            height: 100%;
+            left: -0.5em;
+            top: 0.5em;
+            width: 0.5em;
+        }
+
+        /* .tree li:before {
             content: "";
             position: absolute;
             top: -0.5em;
@@ -37,7 +59,7 @@
             border-left: 1px solid #000;
             width: 0.5em;
             height: 100%;
-        }
+        } */
 
         .tree>li:after {
             /* border-left: none; */
@@ -45,14 +67,6 @@
 
         .tree li:last-child:after {
             border-left: none;
-        }
-
-        .folder:before {
-            content: "📁 ";
-        }
-
-        .file:before {
-            content: "📄 ";
         }
     </style>
 </head>
